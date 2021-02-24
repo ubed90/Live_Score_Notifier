@@ -1,6 +1,8 @@
 # Live_Score_Notifier
 A Terminal Based Live Score Notifier built completely using Python3
 
+## Works Only For WINDOWS 10
+
 ## installation 
 > pip install requests <br>
 > pip install beautifulsoup4 <br>
