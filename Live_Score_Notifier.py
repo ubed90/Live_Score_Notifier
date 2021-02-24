@@ -39,7 +39,7 @@ class CricketScores:
         data = request.content
         soup = BeautifulSoup(data , 'lxml')
         data = soup.find('div' , class_ = 'cb-col cb-col-67 cb-scrs-wrp')
-        status = soup.find('div' , class_ = 'cb-col cb-col-100 cb-min-stts cb-text-complete') or soup.find('div' , class_ = 'cb-text-inprogress') or soup.find('div' , class_ = 'cb-text-stumps') or soup.find('div' , class_ = 'cb-text-lunch') or soup.find('div' , class_ = 'cb-text-tea')
+        status = soup.find('div' , class_ = 'cb-col cb-col-100 cb-min-stts cb-text-complete') or soup.find('div' , class_ = 'cb-text-inprogress') or soup.find('div' , class_ = 'cb-text-stumps') or soup.find('div' , class_ = 'cb-text-lunch') or soup.find('div' , class_ = 'cb-text-tea') or soup.find('div' , class_ = 'cb-text-inningsbreak')
         if status != None:
             for i in status.attrs.values():
                 if 'cb-text-inprogress' in i:
